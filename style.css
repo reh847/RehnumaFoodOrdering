@@ -1,0 +1,231 @@
+/* css Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* css Variable */
+:root{
+
+    --navbar-height:59px;
+    /* align-items: center; */
+
+
+}
+/* navigation bar :logo and images */
+#logo{
+    margin: 10px 34px;
+    
+}
+#logo img{
+    height: 45px;
+    margin: 8px 8px;
+}
+
+
+/* navigation bar */
+#navbar{
+    display: flex;  /*flex se img or a tg ki values sb ek line me aa jayegi*/
+    align-items:center ;
+    /* position: absolute; iski position absolute krne pr ye parent k upr position le leta h */
+    position: relative; /*relative krne pr parent se isko vhhupa skte h */
+    top: 0px;
+}
+/* navigation bar:list style */
+#navbar ul{
+     display: flex;   /*ye nav bar k ul list k items ko sidha kr denge */
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;  /*zindex ko -1 krne pr hmara content is black bg vlr k upr aa jayega */
+    opacity: 0.4;  /*opacity se bg clr black ka light clr aa jata h */
+}
+#navbar ul li {
+
+    /* color: white; */
+    list-style: none;  /*list style ko none krne se list k bindu hat jayenge*/
+    font-size: 1.3rem;
+}
+#navbar ul li a {
+color: white;
+    display: block; /*display block isliye kiya kyoki li k a me jo element h unko padding deni h */
+padding: 3px 22px;
+/* border:2px solid olivedrab; */
+border-radius: 20px;
+text-decoration: none;
+/* text decoration none krne pr underline hat jati h  */
+    
+}
+#navbar ul li a:hover {
+color:rgb(160, 111, 206); /*color purple dene se anchor tag k element pr hover krne pr clr purple ho jayega*/
+background-color: #fff;  /*a k elemnt ka clr white kr diya */
+
+    
+}
+
+
+/* Home section */
+#Home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    justify-content: center;  /*justify content center krne pr home ka  sara data center me aa jayega */
+    align-items: center; 
+    height: 460px;     /*align item center krne se sara text align ho jyega*/
+}
+#Home::before{
+    content: "";
+    background: url('../image/foodorder.jpg') no-repeat center center/cover;
+    /* background:url('../image/foodorder.jpg') no-repeat center center/cover; */
+    /*  agr image ko  repeat nhi krana center pr dikhana h or center se pura cover krvana h  to img url function k baad hum no repeat center center\cover ka use krenge  */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 88%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.90;
+}
+#Home h1{
+    color: white;
+    text-align: center;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+#Home p{
+    color:whitesmoke;
+    text-align: center;
+    font-size: 1.4rem;  /*rem relative to root element*/
+    font-family: cursive;
+}
+
+
+/* sevices section  */
+#services{
+    margin: 20px;
+    display: flex;
+    /* background:rgb(190, 98, 98); */
+}
+#services .box{
+border: 2px solid brown;
+padding: 34px;
+margin:3px 6px;
+border-radius: 28px;
+background:rgb(230, 213, 213);
+
+}
+#services .box img{
+    height: 156px;
+    display: block;
+    margin: auto;
+
+}
+#services .box p{
+    font-family: cursive;
+}
+/* #services-container::before{
+    content: "";
+    position: absolute;
+    background: url('../image/services.jpg') no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    z-index: -1;
+    opacity: 0.4;
+} */
+
+
+/* client section */
+#client-section{
+    /* position: relative; */
+/* height: 280px; */
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../image/stockfoodlogo.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 45%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 40px;
+}
+#clients img{
+    height: 110px;
+
+}
+
+/* Contact Us section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background:url('../image/contact1.jpg') no-repeat center center/cover;
+}
+#contact-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+ #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+font-size: 1.3rem;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 6px 20px;
+}
+/* utility classes */
+.h-primary{
+    font-size: 2.3rem;
+    padding: 3px;
+    
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: brown;
+    color: burlywood;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
